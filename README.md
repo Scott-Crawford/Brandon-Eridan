@@ -1,3 +1,3 @@
-# Brandon-Eichenlaub
+# Brandon-Eridan
 website for boyfriend
-brandoneichenlaub.com
+brandoneridan.com
