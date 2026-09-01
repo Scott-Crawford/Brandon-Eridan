@@ -1,0 +1,62 @@
+/* =====================================================================
+   Final layout — one design. Landing is the "Atelier" gallery treatment;
+   category + project pages use the "Stage" masonry treatment. Shared shell
+   rules live in base.css; this file only handles arrangement/density.
+   ===================================================================== */
+
+/* ===== Landing hero (Atelier: tall banner, centered title) ===== */
+.hero { height: 82vh; min-height: 560px; }
+.hero-box { text-align: center; padding-left: 8vw; padding-right: 8vw; }
+.hero-name { font-size: clamp(2rem, 5vw, 3.4rem); }
+
+/* ===== Home tiles (Atelier: 2×2 grid) ===== */
+.home-tiles {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px;
+  max-width: var(--maxw); margin: 0 auto; padding: var(--gap);
+}
+.tile { aspect-ratio: 3 / 2; }
+.tile-overlay { align-items: center; justify-content: center; text-align: center; }
+
+/* ===== Category work grid (Stage: masonry, original-resolution crops) =====
+   Columns are built in WorkGrid.jsx (round-robin) so order reads left-to-right;
+   here we just lay the columns out side by side. */
+.work-grid { display: flex; gap: var(--gap); align-items: flex-start; }
+.work-col {
+  flex: 1 1 0; min-width: 0; list-style: none; margin: 0; padding: 0;
+  display: flex; flex-direction: column; gap: var(--gap);
+}
+.work-media { aspect-ratio: auto; height: auto; }
+
+/* ===== Project detail (Atelier credit box + Stage image treatment) ===== */
+/* Credits: sticky sidebar on desktop (Atelier). */
+.project-body.has-credits { grid-template-columns: 240px 1fr; }
+/* Gallery: Stage masonry, images shown at their original aspect. */
+.project-gallery { display: block; column-count: 2; column-gap: var(--gap); }
+.project-body.no-credits .project-gallery { column-count: 3; }
+.gallery-item { display: block; width: 100%; margin: 0 0 var(--gap); break-inside: avoid; }
+.gallery-media { aspect-ratio: auto; height: auto; object-fit: contain; }
+
+@media (max-width: 720px) {
+  /* Mobile: Stage credit box — a horizontal band above the gallery. */
+  .project-body.has-credits { grid-template-columns: 1fr; }
+  .project-body .credits {
+    position: static; top: auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.75rem 1.25rem;
+  }
+  .project-body .credits-heading { grid-column: 1 / -1; }
+  .project-gallery, .project-body.no-credits .project-gallery { column-count: 1; }
+}
+
+/* ===== Mobile landing tiles =====
+   Loaded last so these win over the 2×2 grid above. On phones the tiles
+   stack in a single, edge-to-edge column so each cover image is clearly
+   visible with its caption. */
+@media (max-width: 560px) {
+  .home-tiles {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 0;
+    max-width: none;
+  }
+  .tile { aspect-ratio: 4 / 3; }
+}
