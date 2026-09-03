@@ -79,8 +79,8 @@ test.describe('projects + galleries', () => {
   test('category pages lead with the expected project', async ({ page }) => {
     const leads = {
       '/costumes': 'Regency 3-Piece Suit',
-      '/fashion': 'Jumpsuit Upcycle',
-      '/digital-patterning': 'Skating Costume',
+      '/fashion': 'KonPan Coat',
+      '/digital-patterning': 'Arcadia',
     }
     for (const [route, firstTitle] of Object.entries(leads)) {
       await page.goto(route)

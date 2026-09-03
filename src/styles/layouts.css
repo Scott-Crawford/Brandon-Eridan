@@ -30,11 +30,29 @@
 /* ===== Project detail (Atelier credit box + Stage image treatment) ===== */
 /* Credits: sticky sidebar on desktop (Atelier). */
 .project-body.has-credits { grid-template-columns: 240px 1fr; }
-/* Gallery: Stage masonry, images shown at their original aspect. */
-.project-gallery { display: block; column-count: 2; column-gap: var(--gap); }
-.project-body.no-credits .project-gallery { column-count: 3; }
-.gallery-item { display: block; width: 100%; margin: 0 0 var(--gap); break-inside: avoid; }
+/* Gallery: Stage masonry, images shown at their original aspect. Columns are
+   built round-robin in Project.jsx so order reads left-to-right; here we lay
+   the columns side by side. */
+.project-gallery { display: flex; gap: var(--gap); align-items: flex-start; }
+.gallery-col { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: var(--gap); }
+.gallery-item { display: block; width: 100%; margin: 0; }
 .gallery-media { aspect-ratio: auto; height: auto; object-fit: contain; }
+
+/* Cross-link gallery tile: a single image that navigates to the paired
+   full-costume / CLO-pattern gallery instead of opening the lightbox. */
+.gallery-item--link { position: relative; cursor: pointer; text-decoration: none; }
+.gallery-link-badge {
+  position: absolute; left: 10px; bottom: 10px;
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 7px 11px; border-radius: 4px;
+  background: rgba(20, 18, 16, 0.82); color: #f5f1ea;
+  font-size: 0.8rem; letter-spacing: 0.03em; line-height: 1;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+.gallery-item--link:hover .gallery-link-badge,
+.gallery-item--link:focus-visible .gallery-link-badge { background: rgba(20, 18, 16, 0.96); }
+.gallery-item--link:focus-visible { outline: 2px solid #b08d57; outline-offset: 2px; }
 
 @media (max-width: 720px) {
   /* Mobile: Stage credit box — a horizontal band above the gallery. */
@@ -44,7 +62,6 @@
     display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.75rem 1.25rem;
   }
   .project-body .credits-heading { grid-column: 1 / -1; }
-  .project-gallery, .project-body.no-credits .project-gallery { column-count: 1; }
 }
 
 /* ===== Mobile landing tiles =====

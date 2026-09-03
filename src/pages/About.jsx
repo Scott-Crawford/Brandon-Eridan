@@ -1,6 +1,7 @@
 import { site } from '../data/site.js'
 import Thumb from '../components/Thumb.jsx'
 import SocialIcon from '../components/SocialIcon.jsx'
+import Rich from '../components/Rich.jsx'
 
 // Combined About + Contact. Email + Instagram are shown as icon + label pairs.
 // Résumé opens in a new tab; commissions link out to the Google Form. Both are
@@ -31,7 +32,7 @@ export default function About() {
           <h1 className="about-title">About</h1>
           {site.bio.map((para) => (
             <p key={para.slice(0, 24)} className="about-para">
-              {para}
+              <Rich text={para} />
             </p>
           ))}
 

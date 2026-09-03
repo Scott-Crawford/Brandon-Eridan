@@ -27,12 +27,35 @@ const raw = [
     category: 'costumes',
     date: '2026',
     description:
-      'A tailored Regency three-piece suit built for the production of Arcadia at Carnegie Mellon University.',
+      'A tailored Regency three-piece suit built for the production of *Arcadia* at Carnegie Mellon University.',
     credits: {
       production: 'Arcadia',
       company: 'Carnegie Mellon University',
       designer: 'Pei Liu',
       photo: 'Louis Stein',
+    },
+    crossLink: {
+      image: '/images/arcadia-pattern/cover.jpg',
+      to: 'arcadia-pattern',
+      label: 'View CLO 3D pattern',
+    },
+  },
+  {
+    slug: 'skating-costume',
+    title: 'Skating Costume',
+    category: 'costumes',
+    date: '2026',
+    description:
+      "A modern interpretation of Torvill and Dean's 1984 *Bolero* routine, made for the Stretchwear course at CMU.",
+    credits: {
+      type: 'Class Project',
+      class: 'Stretchwear',
+      design: 'Hugh Hanson',
+    },
+    crossLink: {
+      image: '/images/skating-costume/g03.png',
+      to: 'skating-costume-pattern',
+      label: 'View CLO 3D pattern',
     },
   },
   {
@@ -40,7 +63,7 @@ const raw = [
     title: 'Fur Chap Bodysuit',
     category: 'costumes',
     date: '2025',
-    description: 'A fur chap bodysuit made for Anemia Blunt.',
+    description: 'A 4-way stretch bodysuit with attached fur chaps, made for Anemia Blunt.',
     credits: {
       madeFor: 'Anemia Blunt',
       photo: 'Starboy Images',
@@ -61,20 +84,26 @@ const raw = [
     slug: '70s-suit',
     title: '1970s 3-Piece Suit',
     category: 'costumes',
-    description: 'A 1970s-inspired tailored three-piece suit, built as a class project in tailoring.',
+    date: '2025',
+    description: 'Built during a year-long tailoring course at CMU.',
     credits: {
-      project: 'Class Project',
-      technique: 'Tailoring',
+      type: 'Class Project (Tailoring)',
     },
   },
   {
     slug: 'lilac-fairy',
     title: 'The Lilac Fairy',
     category: 'costumes',
-    description: 'A Lilac Fairy dancewear costume, built as a class project.',
+    date: '2025',
+    description:
+      'Traditional ballet bodice and bell-shaped tutu, inspired by the Lilac Fairy from *Sleeping Beauty*.',
     credits: {
-      project: 'Class Project',
-      type: 'Dancewear',
+      type: 'Class Project (Dancewear)',
+    },
+    crossLink: {
+      image: '/images/lilac-fairy/g03.jpg',
+      to: 'lilac-fairy-pattern',
+      label: 'View CLO 3D pattern',
     },
   },
   {
@@ -82,10 +111,17 @@ const raw = [
     title: 'Orange Chromatica Bodysuit and Drape',
     category: 'costumes',
     date: '2024',
-    description: 'An orange chromatica bodysuit and drape, made for Joey Young for Edgewood Magazine.',
+    description:
+      'Custom bodysuit with attached fabric drape, made for Joey Young for *Edgewood Magazine*.',
     credits: {
       madeFor: 'Joey Young',
       publication: 'Edgewood Magazine',
+      photo: '@zeldakollins',
+      photoEditing: '@indigosparksss',
+      hair: '@jaidiar_',
+      shoulderBracers: '@indigosparksss',
+      dyeWork: '@briandaviddesigns',
+      stoning: '@itsjoeyyoung, @portiasparksss, @anemiablunt, @zeldakollins, @warrendmunroe',
     },
   },
   {
@@ -94,7 +130,7 @@ const raw = [
     category: 'costumes',
     date: '2024',
     description:
-      'A patchwork gown of post-apocalyptic secondhand materials for Mr. Burns: A Post-Electric Play.',
+      'A multi-textured patchwork gown for Marge, Act 3, in *Mr. Burns: A Post-Electric Play*.',
     credits: {
       production: 'Mr. Burns: A Post-Electric Play',
       company: 'Carnegie Mellon University',
@@ -107,44 +143,23 @@ const raw = [
     category: 'costumes',
     date: '2024',
     description:
-      'A patchwork denim toga built from reclaimed materials for Mr. Burns: A Post-Electric Play.',
+      'A patchwork toga created from jeans for Homer, Act 3, in *Mr. Burns: A Post-Electric Play*.',
     credits: {
       production: 'Mr. Burns: A Post-Electric Play',
       company: 'Carnegie Mellon University',
-    },
-  },
-  {
-    slug: 'titanic-boarding-suit',
-    title: '1912 Boarding Suit',
-    category: 'costumes',
-    placeholder: true,
-    description: 'A 1912 boarding suit for Titanic at Carnegie Mellon University. Images coming soon.',
-    credits: {
-      production: 'Titanic',
-      company: 'Carnegie Mellon University',
-      designer: 'Olivia Curry',
-      photo: 'DSR Photo',
-    },
-  },
-  {
-    slug: 'jirachi-gijinka',
-    title: 'Jirachi Gijinka',
-    category: 'costumes',
-    placeholder: true,
-    description: 'A personal gijinka cosplay of Jirachi from Pokémon. Images coming soon.',
-    credits: {
-      series: 'Pokémon',
-      type: 'Personal Cosplay',
+      designer: 'Jeremy Pitzer',
     },
   },
   {
     slug: 'striped-dress',
     title: '1892 Striped Promenade Dress',
     category: 'costumes',
-    description: 'An 1892 striped promenade dress, built as a class project in advanced draping.',
+    date: '2024',
+    description:
+      'Recreation of an 1892 fashion plate for the Advanced Artisan Draping course at CMU.',
     credits: {
-      project: 'Class Project',
-      technique: 'Advanced Draping',
+      type: 'Class Project',
+      class: 'Advanced Artisan Draping',
     },
   },
   {
@@ -161,6 +176,26 @@ const raw = [
 
   // ---------------- FASHION ----------------
   {
+    slug: 'konpan-coat',
+    title: 'KonPan Coat',
+    category: 'fashion',
+    date: '2026',
+    description:
+      'Graduate thesis project for CMU: a historically-inspired cape-sleeve coat designed, developed, and resized in CLO | 3D.',
+    crossLink: {
+      image: '/images/konpan-coat/g04.png',
+      to: 'konpan-coat-pattern',
+      label: 'View CLO 3D pattern',
+    },
+  },
+  {
+    slug: 'soyon-lingerie',
+    title: 'Soyon Lingerie',
+    category: 'fashion',
+    date: '2026',
+    description: 'A custom lingerie set, designed by Soyon Kim.',
+  },
+  {
     slug: 'jumpsuit-upcycle',
     title: 'Jumpsuit Upcycle',
     category: 'fashion',
@@ -171,101 +206,97 @@ const raw = [
     slug: 'braided-ensemble',
     title: 'The Braided Ensemble',
     category: 'fashion',
-    description: 'A braided ensemble.',
-  },
-  {
-    slug: 'trespassing-jacket',
-    title: 'The Trespassing Jacket',
-    category: 'fashion',
-    description: 'The Trespassing Jacket.',
+    date: '2024',
+    description: 'A Renaissance-inspired set, made for the 2024 Rhinestone Steel Queer Fashion Show.',
   },
   {
     slug: 'strapped-corset-top',
     title: 'Strapped Corset Top',
     category: 'fashion',
     date: '2023',
-    description: 'A strapped corset top.',
+    description: "Inspired by an advertisement for men's corsets, ca. early 1890s.",
   },
   {
     slug: 'suture-jack',
     title: 'The Suture Jack',
     category: 'fashion',
-    description: 'A constructed jacket, the Suture Jack.',
+    date: '2019',
+    description: 'A distressed denim jacket with extensive grommet detailing.',
+  },
+  {
+    slug: 'trespassing-jacket',
+    title: 'The Trespassing Jacket',
+    category: 'fashion',
+    date: '2018',
+    description: 'Inspired by a jacket worn by Adam Lambert ca. 2013.',
   },
   {
     slug: 'prideful-ones',
     title: 'The Prideful Ones Jacket',
     category: 'fashion',
-    description: 'The Prideful Ones jacket.',
-  },
-  {
-    slug: 'konpan-coat',
-    title: 'KonPan Coat',
-    category: 'fashion',
-    description: 'A statement coat, patterned in CLO 3D.',
-  },
-  {
-    slug: 'soyon-lingerie',
-    title: 'Soyon Lingerie',
-    category: 'fashion',
-    date: '2026',
-    description: 'A lingerie set. Illustration by Soyon Kim.',
-  },
-  {
-    slug: 'scott-corset',
-    title: 'Scott Corset',
-    category: 'fashion',
-    placeholder: true,
-    description: 'A custom-fitted corset. Images coming soon.',
+    date: '2018',
+    description: 'A studded and painted transgender pride-themed jacket.',
   },
 
   // ---------------- DIGITAL PATTERNING (CLO 3D) ----------------
   {
-    slug: 'skating-costume-pattern',
-    mediaKey: 'skating-costume',
-    title: 'Skating Costume',
-    category: 'digital-patterning',
-    description: 'A skating costume patterned and simulated in CLO 3D.',
-  },
-  {
-    slug: 'leggings',
-    title: 'Leggings',
-    category: 'digital-patterning',
-    placeholder: true,
-    description: 'Leggings drafted and simulated in CLO 3D. Images coming soon.',
-  },
-  {
-    slug: 'cape-coat',
-    title: 'Cape Coat',
-    category: 'digital-patterning',
-    placeholder: true,
-    description: 'A cape coat digitally patterned in CLO 3D. Images coming soon.',
-  },
-  {
     slug: 'arcadia-pattern',
-    mediaKey: 'arcadia',
     title: 'Arcadia',
     category: 'digital-patterning',
     date: '2026',
-    description: 'Digital patterning and 3D simulation in CLO 3D for the Arcadia Regency suit.',
+    description: 'Digital patterning and 3D simulation in CLO 3D for the *Arcadia* Regency suit.',
     credits: { production: 'Arcadia', company: 'Carnegie Mellon University', designer: 'Pei Liu' },
+    crossLink: {
+      image: '/images/arcadia/cover.jpg',
+      to: 'arcadia',
+      label: 'View full costume',
+    },
   },
   {
     slug: 'konpan-coat-pattern',
-    mediaKey: 'konpan-coat',
     title: 'KonPan Coat',
     category: 'digital-patterning',
     // Use the CLO 3D pattern-development render as the cover so the category
     // preview shows an actual digital pattern.
     coverImage: '/images/konpan-coat/g04.png',
     description: 'The KonPan coat, digitally patterned in CLO 3D.',
+    crossLink: {
+      image: '/images/konpan-coat/g01.jpg',
+      to: 'konpan-coat',
+      label: 'View full garment',
+    },
   },
   {
-    slug: 'jester-vestments',
-    title: "The Jester's Vestments",
+    slug: 'skating-costume-pattern',
+    title: 'Skating Costume',
     category: 'digital-patterning',
-    placeholder: true,
-    description: "The Jester's Vestments, digitally patterned in CLO 3D. Images coming soon.",
+    date: '2026',
+    description: 'CLO 3D digital patterning and simulation for the *Bolero* skating costume.',
+    credits: {
+      type: 'Class Project',
+      class: 'Stretchwear',
+      design: 'Hugh Hanson',
+    },
+    crossLink: {
+      image: '/images/skating-costume/cover.jpg',
+      to: 'skating-costume',
+      label: 'View full costume',
+    },
+  },
+  {
+    slug: 'lilac-fairy-pattern',
+    title: 'The Lilac Fairy',
+    category: 'digital-patterning',
+    date: '2025',
+    description: 'CLO 3D digital patterning for the Lilac Fairy ballet bodice.',
+    credits: {
+      type: 'Class Project (Dancewear)',
+    },
+    crossLink: {
+      image: '/images/lilac-fairy/cover.jpg',
+      to: 'lilac-fairy',
+      label: 'View full costume',
+    },
   },
 ]
 

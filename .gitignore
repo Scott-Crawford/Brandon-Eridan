@@ -23,3 +23,7 @@ test-results/
 playwright-report/
 playwright/.cache/
 .playwright-mcp/
+
+# Dev-only image tooling scratch (contact sheets + original backups)
+tmp-sheets/
+tmp-orig/

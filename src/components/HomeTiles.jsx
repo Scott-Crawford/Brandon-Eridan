@@ -9,8 +9,8 @@ export default function HomeTiles() {
   // Chosen cover per category tile (overrides the first project's cover).
   // Fashion shows the KonPan coat; Digital Patterning shows a CLO 3D render.
   const tileCover = {
-    fashion: '/images/konpan-coat/cover.jpg',
-    'digital-patterning': '/images/skating-costume/g03.png',
+    fashion: '/images/trespassing-jacket/tile.jpg',
+    'digital-patterning': '/images/arcadia-pattern/cover.jpg',
   }
   const tiles = [
     ...categories.map((c) => ({
@@ -19,7 +19,7 @@ export default function HomeTiles() {
       blurb: c.blurb,
       cover: tileCover[c.slug] || projectsByCategory(c.slug)[0]?.coverImage,
     })),
-    { to: '/about', label: 'About', blurb: 'Bio, résumé, and commissions.', cover: site.aboutImage },
+    { to: '/about', label: 'About', blurb: 'Bio, résumé, commission request form', cover: site.aboutImage },
   ]
 
   return (

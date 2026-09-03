@@ -13,11 +13,14 @@ const LABELS = {
   construction: 'Construction',
   dyeWork: 'Dye Work',
   stoning: 'Stoning',
+  shoulderBracers: 'Shoulder Piece & Bracers',
   madeFor: 'Made for',
   series: 'Series',
   type: 'Type',
   project: 'Project',
   technique: 'Technique',
+  class: 'Class',
+  design: 'Design',
   publication: 'Publication',
 }
 
