@@ -37,7 +37,7 @@ const raw = [
     crossLink: {
       image: '/images/arcadia-pattern/cover.jpg',
       to: 'arcadia-pattern',
-      label: 'View CLO 3D pattern',
+      label: 'View CLO | 3D pattern',
     },
   },
   {
@@ -55,7 +55,7 @@ const raw = [
     crossLink: {
       image: '/images/skating-costume/g03.png',
       to: 'skating-costume-pattern',
-      label: 'View CLO 3D pattern',
+      label: 'View CLO | 3D pattern',
     },
   },
   {
@@ -103,7 +103,7 @@ const raw = [
     crossLink: {
       image: '/images/lilac-fairy/g03.jpg',
       to: 'lilac-fairy-pattern',
-      label: 'View CLO 3D pattern',
+      label: 'View CLO | 3D pattern',
     },
   },
   {
@@ -185,7 +185,7 @@ const raw = [
     crossLink: {
       image: '/images/konpan-coat/g04.png',
       to: 'konpan-coat-pattern',
-      label: 'View CLO 3D pattern',
+      label: 'View CLO | 3D pattern',
     },
   },
   {
@@ -238,13 +238,13 @@ const raw = [
     description: 'A studded and painted transgender pride-themed jacket.',
   },
 
-  // ---------------- DIGITAL PATTERNING (CLO 3D) ----------------
+  // ---------------- DIGITAL PATTERNING (CLO | 3D) ----------------
   {
     slug: 'arcadia-pattern',
     title: 'Arcadia',
     category: 'digital-patterning',
     date: '2026',
-    description: 'Digital patterning and 3D simulation in CLO 3D for the *Arcadia* Regency suit.',
+    description: 'Digital patterning and 3D simulation in CLO | 3D for the *Arcadia* Regency suit.',
     credits: { production: 'Arcadia', company: 'Carnegie Mellon University', designer: 'Pei Liu' },
     crossLink: {
       image: '/images/arcadia/cover.jpg',
@@ -256,10 +256,10 @@ const raw = [
     slug: 'konpan-coat-pattern',
     title: 'KonPan Coat',
     category: 'digital-patterning',
-    // Use the CLO 3D pattern-development render as the cover so the category
+    // Use the CLO | 3D pattern-development render as the cover so the category
     // preview shows an actual digital pattern.
     coverImage: '/images/konpan-coat/g04.png',
-    description: 'The KonPan coat, digitally patterned in CLO 3D.',
+    description: 'The KonPan coat, digitally patterned in CLO | 3D.',
     crossLink: {
       image: '/images/konpan-coat/g01.jpg',
       to: 'konpan-coat',
@@ -271,7 +271,7 @@ const raw = [
     title: 'Skating Costume',
     category: 'digital-patterning',
     date: '2026',
-    description: 'CLO 3D digital patterning and simulation for the *Bolero* skating costume.',
+    description: 'CLO | 3D digital patterning and simulation for the *Bolero* skating costume.',
     credits: {
       type: 'Class Project',
       class: 'Stretchwear',
@@ -288,7 +288,7 @@ const raw = [
     title: 'The Lilac Fairy',
     category: 'digital-patterning',
     date: '2025',
-    description: 'CLO 3D digital patterning for the Lilac Fairy ballet bodice.',
+    description: 'CLO | 3D digital patterning for the Lilac Fairy ballet bodice.',
     credits: {
       type: 'Class Project (Dancewear)',
     },

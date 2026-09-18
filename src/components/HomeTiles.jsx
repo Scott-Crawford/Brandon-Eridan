@@ -7,7 +7,7 @@ import Thumb from './Thumb.jsx'
 // Each tile's text sits in a translucent shadowbox for readability.
 export default function HomeTiles() {
   // Chosen cover per category tile (overrides the first project's cover).
-  // Fashion shows the KonPan coat; Digital Patterning shows a CLO 3D render.
+  // Fashion shows the KonPan coat; Digital Patterning shows a CLO | 3D render.
   const tileCover = {
     fashion: '/images/trespassing-jacket/tile.jpg',
     'digital-patterning': '/images/arcadia-pattern/cover.jpg',

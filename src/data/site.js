@@ -4,7 +4,7 @@ export const site = {
   name: 'Brandon Eridan',
   role: 'Costume Technician | Digital Patternmaker',
   location: 'Pittsburgh, PA',
-  email: 'rmeichs75@gmail.com',
+  email: 'selvedgedesigned@gmail.com',
 
   // Commission Google Form (from his Linktree).
   commissionFormUrl:

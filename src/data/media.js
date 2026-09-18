@@ -207,10 +207,10 @@ export const media = {
     ],
   },
   'strapped-corset-top': {
-    cover: '/images/strapped-corset-top/g03.jpg',
+    cover: '/images/strapped-corset-top/cover.png',
     gallery: [
+      '/images/strapped-corset-top/g03.jpg',
       '/images/strapped-corset-top/g05.jpg',
-      '/images/strapped-corset-top/cover.png',
       '/images/strapped-corset-top/g06.jpg',
       '/images/strapped-corset-top/g01.jpg',
       '/images/strapped-corset-top/g02.jpg',

@@ -117,7 +117,7 @@ order within each category follows his live galleries at
 `rmeichs75.wixsite.com/brandon-eridan`.
 
 **Contact / links:**
-- Email **rmeichs75@gmail.com**
+- Email **selvedgedesigned@gmail.com**
 - Instagram **@saint_ends**
 - Résumé: converted from his `.docx` to repo-hosted **`/resume.pdf`** (opens in a new tab).
 - Commission **Google Form:** `https://docs.google.com/forms/d/e/1FAIpQLSdt6W1e_Kkcp68TuP1WuQLqypOshJlao_LViDmDsxdxtR9geg/viewform` (link-out button).
@@ -127,7 +127,7 @@ order within each category follows his live galleries at
 **Category descriptions:**
 - Costumes — "Pieces made for productions, personal costumes, and cosplays."
 - Fashion — "Clothing pieces for self, others, or class projects."
-- Digital Patterning — "Digital patterns and projects created in CLO 3D."
+- Digital Patterning — "Projects created in CLO | 3D"
 
 ### Build status
 - **Images:** real photos live in `public/images/<slug>/` (cover + gallery), with
